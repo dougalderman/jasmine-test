@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="jasmineTest">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jasmine Test</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- This div element corresponds to the  CalculatorController we created via the JavaScript-->
+		<div ng-controller="mainCtrl">
+			<input ng-model="x" type="number" ng-change="calc()">
+      +
+      <input ng-model="y" type="number" ng-change="calc()">
+      =
+      <strong>{{z}}</strong>
+		</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/mainCtrl.js"></script>
+
+</body>
+
+</html>
