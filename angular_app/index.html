@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Jasmine Test</title>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.3.3/jasmine.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
@@ -13,18 +12,13 @@
   <!-- This div element corresponds to the  CalculatorController we created via the JavaScript-->
 		<div ng-controller="mainCtrl">
 			<input ng-model="x" type="number" ng-change="sum()">
-      +s
+      +
       <input ng-model="y" type="number" ng-change="sum()">
       =
       <strong>{{z}}</strong>
 		</div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.js"></script>
-    <script type="text/javascript" src="https://code.angularjs.org/1.4.0-rc.2/angular-mocks.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.3.3/jasmine.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.3.3/jasmine-html.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.3.3/boot.min.js"></script>
 
     <script src="js/app.js"></script>
     <script src="js/mainCtrl.js"></script>
