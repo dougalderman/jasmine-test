@@ -1,18 +1,24 @@
-describe('calculator', function () {
+describe('testMainCtrl', function () {
 
-  beforeEach(module('jasmineTest'));
-  var $controller;
-  beforeEach(inject(function(_$controller_){
-    $controller = _$controller_;
+  var scope, createController;
+
+  beforeEach(inject(function ($rootScope, $controller) {
+      scope = $rootScope.$new();
+
+      createController = function() {
+          return $controller('mainCtrl', {
+              '$scope': scope
+          });
+      };
   }));
-  describe('sum', function () {
-    it('1 + 1 should equal 2', function () {
-      var $scope = {};
-      var controller = $controller('mainCtrl', { $scope: $scope });
-      $scope.x = 1;
-      $scope.y = 2;
-      $scope.sum();
-      expect($scope.z).toBe(3);
-    });
+
+  it('1 + 1 should equal 2', function () {
+    var $scope = {};
+    var controller = createController();
+    scope.x = 1;
+    scope.y = 2;
+    scope.sum();
+    expect(scope.z).toBe(3);
   });
+
 });
